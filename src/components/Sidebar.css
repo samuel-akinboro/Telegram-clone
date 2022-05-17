@@ -1,0 +1,52 @@
+.sidebar__container {
+  height: 100%;
+  flex: 1;
+  border-right: 1px solid rgb(172, 170, 170);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__container > .sidebar__header {
+  display: flex;
+  align-items: center;
+  height: 59px;
+  padding: 0 1em;
+  gap: 15px;
+}
+
+.sidebar__container > .sidebar__header > .search__box{
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  padding: 0.4em;
+  flex: 1;
+  border-radius: 20px;
+  gap: 10px;
+}
+
+.sidebar__container > .sidebar__header > .MuiSvgIcon-root{
+  color: #707579;
+}
+
+.sidebar__container > .sidebar__header > .search__box > input{
+  border: none;
+  flex: 1;
+  outline: none;
+}
+
+.sidebar__container > .sidebar__header > .search__box > input::placeholder{
+  font-size: 1.2em;
+  color: #8c8f90;
+}
+
+.sidebar__container > .sidebar__header > .search__box > .MuiSvgIcon-root{
+  color: #AAADAF;
+}
+
+.sidebar__container > .sidebar__messages{
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}

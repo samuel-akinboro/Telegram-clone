@@ -1,0 +1,6 @@
+.chat__container{
+  height: 100%;
+  flex: 2;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
