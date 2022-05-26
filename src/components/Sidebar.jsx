@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Sidebar.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import SidebarMessage from './SidebarMessage';
+import { QueryStatsTwoTone } from '@mui/icons-material';
 
 function Sidebar () {
   return (
