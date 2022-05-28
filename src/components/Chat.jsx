@@ -8,6 +8,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import MicOutlinedIcon from '@mui/icons-material/MicOutlined';
 import EmojiEmotionsOutlinedIcon from '@mui/icons-material/EmojiEmotionsOutlined';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
+import ChatMessage from './ChatMessage'
 
 const Chat = () => {
   return (
@@ -26,18 +27,23 @@ const Chat = () => {
           </div>
         </div>
       {/* Chat Middle */}
-        <div className="flex-1 w-full bg-red-700">
-
+        <div className="middle flex-1 w-full flex flex-col items-center p-2">
+          <ChatMessage />
+          <ChatMessage />
+          <ChatMessage />
+          <ChatMessage />
         </div>
       {/* Chat footer */}
         <div className="w-full pb-5 pt-2">
           <div className="w-[512px] mx-auto flex">
-            <div className="h-[55px] bg-white w-[452px] flex items-center p-3 rounded-xl relative before:content-[''] before:absolute before:right-[-15px] before:h-4 before:w-4 before:bg-red-700">
-              <EmojiEmotionsOutlinedIcon />
+            <div className="h-[55px] bg-white w-[452px] flex items-center p-3 rounded-xl relative before:content-[''] before:absolute before:right-[-9px] before:border-[10px] before:border-[white] before:border-t-[transparent] before:border-r-[transparent] before:border-l-[transparent] before:bottom-0 shadow-2xl">
+              <EmojiEmotionsOutlinedIcon className="cursor-pointer text-[#707579]" />
               <input type="text" placeholder='Message' className="flex-1 p-2 outline-none"/>
-              <AttachFileIcon />
+              <AttachFileIcon className="cursor-pointer text-[#707579] rotate-45" />
             </div>
-            <MicOutlinedIcon />
+            <div className="flex justify-center items-center w-[55px] h-[55px] bg-[#3390EC] ml-3 rounded-full shadow-lg cursor-pointer">
+              <MicOutlinedIcon className="text-white" />
+            </div>
           </div>
         </div>
     </div>
