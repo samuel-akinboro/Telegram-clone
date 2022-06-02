@@ -12,8 +12,10 @@ import ChatMessage from './ChatMessage'
 
 const Chat = () => {
   return (
-    <div className="chat__container flex flex-col" style={{backgroundImage: `url(${ChatBackgroundImage}), linear-gradient(45deg, #7AAD89,#D4D78D,#7AAD89)`}}>
-      {/* Chat header */}
+    <div className="chat__container flex" style={{backgroundImage: `url(${ChatBackgroundImage}), linear-gradient(45deg, #7AAD89,#D4D78D,#7AAD89)`}}>
+      {/* chat left */}
+      <div className='flex-[2] flex flex-col'>
+        {/* Chat header */}
         <div className='h-[57px] bg-white w-full flex items-center space-x-5 p-5'>
           <Avatar src={ChatBackgroundImage} />
           <div className="flex-1">
@@ -27,14 +29,16 @@ const Chat = () => {
           </div>
         </div>
       {/* Chat Middle */}
-        <div className="middle flex-1 w-full flex flex-col items-center p-2">
+        <div className="flex-1 w-full flex flex-col items-center p-2 overflow-y-auto">
+          <ChatMessage />
+          <ChatMessage />
           <ChatMessage />
           <ChatMessage />
           <ChatMessage />
           <ChatMessage />
         </div>
       {/* Chat footer */}
-        <div className="w-full pb-5 pt-2">
+        <div className="w-full pb-5 mt-1">
           <div className="w-[512px] mx-auto flex">
             <div className="h-[55px] bg-white w-[452px] flex items-center p-3 rounded-xl relative before:content-[''] before:absolute before:right-[-9px] before:border-[10px] before:border-[white] before:border-t-[transparent] before:border-r-[transparent] before:border-l-[transparent] before:bottom-0 shadow-2xl">
               <EmojiEmotionsOutlinedIcon className="cursor-pointer text-[#707579]" />
@@ -46,6 +50,11 @@ const Chat = () => {
             </div>
           </div>
         </div>
+      </div>
+      {/* chat right */}
+      <div className="flex-1 bg-white border-l-[1px] border-l-gray-300">
+        
+      </div>
     </div>
   )
 }

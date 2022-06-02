@@ -35,12 +35,12 @@ const ChatMessage = () => {
   }
 
   return (
-    <div className="flex mb-2 items-end">
+    <div className="flex mb-2 items-end w-full justify-center">
       <Avatar {...stringAvatar('Ben Charles')} />
-      <div className="relative bg-white ml-2 p-2 rounded-xl before:content-[''] before:absolute before:border-[10px] before:border-[transparent] before:border-b-[white] before:border-r-[white] before:bottom-0 before:left-[-8px] before:z-[-4] z-10 max-w-[440px]">
+      <div className="relative bg-white ml-2 p-2 rounded-xl before:content-[''] before:absolute before:border-[10px] before:border-[transparent] before:border-b-[white] before:border-r-[white] before:bottom-0 before:left-[-6px] before:z-[-4] z-10 max-w-[440px] rounded-bl-none before:rotate-[-6deg]">
         <h3 className='z-10 bg-white'>Ben Charles</h3>
-        <div className="bg-[#EFF6FD]">
-          <div className="border-l-[2.5px] border-l-[#3390EC] p-2 rounded-md">
+        <div className="hover:bg-[#EFF6FD] p-2 rounded-md cursor-pointer transform transition duration-75">
+          <div className="border-l-[2.5px] border-l-[#3390EC] pl-2">
             <h4 className="text-[14px] text-[#3390EC]">Tony</h4>
             <p className="text-[14px] font-[400] text-ellipsis whitespace-nowrap overflow-hidden">
               I know but dis bot said habe added 55 
