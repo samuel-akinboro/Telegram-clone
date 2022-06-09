@@ -1,7 +1,25 @@
 import React from 'react'
 import Avatar from '@mui/material/Avatar';
+import axios from 'axios'
 
 const ChatMessage = () => {
+
+  React.useEffect(()=>{
+    let fetchData = async () => {
+      const res = await axios.get('http://api.football-data.org/v4/competitions/2003/matches?matchday=1', {
+        headers: {
+          "Access-Control-Allow-Origin": true,
+          "X-Auth-Token": "c35be3cfde3140888ee01d835cd563b4",
+          withCredentials: true,
+          mode: 'no-cors',
+          'Content-Type': 'application/json'
+        }
+      })
+      console.log(res.data)
+    }
+
+    fetchData()
+  }, [])
 
   function stringToColor(string) {
     let hash = 0;
